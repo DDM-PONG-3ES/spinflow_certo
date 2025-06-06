@@ -305,13 +305,22 @@ class _TelaDashboardState extends State<TelaDashboard>
           if (route.isNotEmpty) {
             Navigator.pushNamed(context, route);
           } else {
-            // Mostrar mensagem de funcionalidade em desenvolvimento
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                content: Text('Funcionalidade "$title" em desenvolvimento'),
-                duration: const Duration(seconds: 2),
-              ),
-            );
+            if (title == 'Vídeo Aula') {
+              Navigator.pushNamed(context, '/video-aula');
+            } else if (title == 'Aluno') {
+              Navigator.pushNamed(context, '/aluno');
+            } else if (title == 'Fabricante') {
+              Navigator.pushNamed(context, '/fabricante');
+            }
+            else {
+              // Navegação temporária desabilitada - rota vazia
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('Funcionalidade "$title" em desenvolvimento'),
+                  duration: const Duration(seconds: 2),
+                ),
+              );
+            }
           }
         },
       ),
