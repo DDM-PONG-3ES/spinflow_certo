@@ -294,7 +294,12 @@ class _TelaDashboardState extends State<TelaDashboard>
             // Navegação específica para VideoAula usando rota nomeada
             if (title == 'Vídeo Aula') {
               Navigator.pushNamed(context, '/video-aula');
-            } else {
+            } else if (title == 'Aluno') {
+              Navigator.pushNamed(context, '/aluno');
+            } else if (title == 'Fabricante') {
+              Navigator.pushNamed(context, '/fabricante');
+            }
+            else {
               // Navegação temporária desabilitada - rota vazia
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
