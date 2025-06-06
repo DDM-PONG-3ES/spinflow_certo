@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/dto/form_aluno.dart';
 import 'package:flutter_application_1/dto/form_fabricante.dart';
+import 'package:flutter_application_1/dto/form_sala.dart';
 import 'package:flutter_application_1/dto/form_video_aula.dart';
 import 'package:flutter_application_1/telas/tela_dashboard.dart';
+import 'package:flutter_application_1/dto/form_tipomanu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,6 +26,8 @@ class MyApp extends StatelessWidget {
         "/video-aula": (context) => const FormVideoAula(),
         "/aluno": (context) => const FormAluno(),
         "/fabricante": (context) => const FormFabricante(),
+        "/sala": (context) => const FormSala(),
+        "/tipomanu": (context) => const FormTipoManutencao(),
       },
     );
   }

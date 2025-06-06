@@ -98,6 +98,12 @@ class _TelaDashboardState extends State<TelaDashboard>
             title: 'Bikes OK',
             color: Colors.teal,
           ),
+          _infoCard(
+            icon: Icons.meeting_room,
+            value: '5',
+            title: 'Salas Ativas',
+            color: Colors.indigo,
+          ),
         ],
       ),
     );
@@ -153,12 +159,20 @@ class _TelaDashboardState extends State<TelaDashboard>
       {
         'title': 'Vídeo Aula',
         'icon': Icons.video_library,
-        'route': '/video-aula'
+        'route': '/video-aula',
       },
       {'title': 'Aluno', 'icon': Icons.person, 'route': ''},
       {'title': 'Fabricante', 'icon': Icons.business, 'route': ''},
-      {'title': 'Sala', 'icon': Icons.room, 'route': ''},
-      {'title': 'Tipo Manutenção', 'icon': Icons.build, 'route': ''},
+      {
+        'title': 'Sala',
+        'icon': Icons.meeting_room,
+        'route': '/sala', // Adicionada rota para sala
+      },
+      {
+        'title': 'Tipo Manutenção',
+        'icon': Icons.build,
+        'route': '/tipomanu',
+      },
       {'title': 'Categoria Música', 'icon': Icons.category, 'route': ''},
       {'title': 'Banda Artista', 'icon': Icons.group, 'route': ''},
       {'title': 'Turma', 'icon': Icons.school, 'route': ''},
@@ -291,7 +305,6 @@ class _TelaDashboardState extends State<TelaDashboard>
           if (route.isNotEmpty) {
             Navigator.pushNamed(context, route);
           } else {
-            // Navegação específica para VideoAula usando rota nomeada
             if (title == 'Vídeo Aula') {
               Navigator.pushNamed(context, '/video-aula');
             } else if (title == 'Aluno') {
