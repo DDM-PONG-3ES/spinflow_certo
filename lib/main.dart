@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/dto/form_sala.dart';
 import 'package:flutter_application_1/dto/form_video_aula.dart';
 import 'package:flutter_application_1/telas/tela_dashboard.dart';
+import 'package:flutter_application_1/dto/form_tipomanu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +22,9 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => const TelaDashboard(), // Adicionado const
         "/video-aula": (context) => const FormVideoAula(),
+        "/sala": (context) => const FormSala(),
+        "/tipomanu": (context) => const FormTipoManutencao(),
+
       },
     );
   }
