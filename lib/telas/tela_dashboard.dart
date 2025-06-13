@@ -160,9 +160,9 @@ class _TelaDashboardState extends State<TelaDashboard>
         'title': 'Vídeo Aula',
         'icon': Icons.video_library,
         'route': '/video-aula',
-      },
-      {'title': 'Aluno', 'icon': Icons.person, 'route': ''},
-      {'title': 'Fabricante', 'icon': Icons.business, 'route': ''},
+      },      {'title': 'Aluno', 'icon': Icons.person, 'route': ''},
+      {'title': 'Fabricante', 'icon': Icons.business, 'route': '/fabricante'},
+      {'title': 'Lista Fabricantes', 'icon': Icons.list, 'route': '/lista-fabricante'},
       {
         'title': 'Sala',
         'icon': Icons.meeting_room,
@@ -300,8 +300,7 @@ class _TelaDashboardState extends State<TelaDashboard>
           Icons.arrow_forward_ios,
           size: 16,
           color: Colors.grey,
-        ),
-        onTap: () {
+        ),        onTap: () {
           if (route.isNotEmpty) {
             Navigator.pushNamed(context, route);
           } else {
@@ -309,10 +308,7 @@ class _TelaDashboardState extends State<TelaDashboard>
               Navigator.pushNamed(context, '/video-aula');
             } else if (title == 'Aluno') {
               Navigator.pushNamed(context, '/aluno');
-            } else if (title == 'Fabricante') {
-              Navigator.pushNamed(context, '/fabricante');
-            }
-            else {
+            } else {
               // Navegação temporária desabilitada - rota vazia
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(

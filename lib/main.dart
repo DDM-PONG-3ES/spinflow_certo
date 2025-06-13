@@ -4,6 +4,7 @@ import 'package:flutter_application_1/dto/form_fabricante.dart';
 import 'package:flutter_application_1/dto/form_sala.dart';
 import 'package:flutter_application_1/dto/form_video_aula.dart';
 import 'package:flutter_application_1/telas/tela_dashboard.dart';
+import 'package:flutter_application_1/telas/lista_fabricante.dart';
 import 'package:flutter_application_1/dto/form_tipomanu.dart';
 
 void main() {
@@ -20,12 +21,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
-      ),
-      routes: {
+      ),      routes: {
         "/": (context) => const TelaDashboard(), // Adicionado const
         "/video-aula": (context) => const FormVideoAula(),
         "/aluno": (context) => const FormAluno(),
         "/fabricante": (context) => const FormFabricante(),
+        "/lista-fabricante": (context) => const ListaFabricante(),
         "/sala": (context) => const FormSala(),
         "/tipomanu": (context) => const FormTipoManutencao(),
       },
